@@ -1,0 +1,21 @@
+:root {
+  --header-home-bg-color: blue;
+  --header-pages-bg-color: white;
+}
+
+.home .header {
+  background-color: var(--header-home-bg-color);
+}
+
+.page .header {
+  background-color: var(--header-pages-bg-color);
+}
+
+.progress {
+  background: linear-gradient(to right, #3863a0 var(--scroll), transparent 0);
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  height: 8px;
+  z-index: 2;
+}
