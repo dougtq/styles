@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fixed Footer</title>
+</head>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+
+  /* Using negative margin-bottom
+  
+  .wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+  }
+
+  .footer,
+  .push {
+    height: 50px;
+  }
+  */
+
+
+/*   Fixed Footer using calc
+  .footer {
+    border: solid 1px black;
+  }
+
+  .content {
+    min-height: calc(100vh - 50px);
+  }
+
+  .footer {
+    height: 50px;
+  } 
+  */
+
+   
+  /* Using Flex Box */
+/*
+  body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    flex: 1;
+  } 
+*/
+
+  /* Using Flex Box */
+
+  body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+
+  .footer {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+</style>
+<body>
+  <!-- <div class="wrapper">
+      content
+    <div class="push"></div>
+  </div>
+  <footer class="footer">
+    Footer is here
+  </footer> -->
+
+  <div class="content">
+    content
+  </div>
+  <footer class="footer">
+    
+  </footer>
+</body>
+</html>
