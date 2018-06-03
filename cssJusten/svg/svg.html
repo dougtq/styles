@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    align-items: center;
+    background: #333;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .send {
+    background: none;
+    color: #fff;
+    border: 1px solid #45981B;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 20px;
+    outline: none;
+    padding: 15px 70px;
+    transition: 0.25s ease-in;
+    transition: background, padding 500ms ease-in-out;
+    box-shadow: 0 0 0 0 rgba(69, 152, 27, 0.5);
+  }
+
+  svg {
+    width: 0;
+    height: 0;
+  }
+
+  .is-success svg {
+    height: 30px;
+    width: 30px;
+  }
+  
+  .check {
+    stroke-dasharray: 130px 130px;
+    stroke-dashoffset: 130px;
+    transition: stroke-dashoffset 500ms ease-in-out;
+  }
+
+  .is-success .check {
+    stroke-dashoffset : 0px;
+  }
+
+  .send.is-loading {
+    padding: 15px 17px;
+    animation: pulse 1.5s infinite;
+  }
+
+  .is-loading span {
+    display: none;
+  }
+
+  .send.is-success {
+    background: #45981B;
+    padding: 15px 17px;
+  }
+
+  .is-success span {
+    display: none;
+  }
+
+  .send:hover:not(.is-loading) {
+    background: #45981B;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(.9);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 200px rgba(69, 152, 27, 0);
+    }
+    100% {
+      transform: scale(.9);
+      box-shadow: 0 0 0 0 rgba(69, 152, 27, 0);
+    }
+  }
+</style>
+<body>
+  <button id="send" class="send">
+      <svg viewBox="0 0 90.594 59.714">
+        <polyline
+          class="check"
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="10"
+          stroke-miterlimit="10"
+          points="1.768,23.532 34.415,56.179 88.826,1.768"
+        />
+      </svg>
+    <span>Send</span>
+  </button>
+  <script src="./svg.js"></script>
+</body>
+</html>
