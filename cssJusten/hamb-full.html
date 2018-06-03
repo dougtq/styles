@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hambúrguer Fullscreen Menu</title>
+</head>
+
+<style>
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #81ecec;
+  }
+
+  div.menu {
+    background: #fff;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+    cursor: pointer;
+    transition: box-shadow 1s ease-in-out;
+  }
+
+  .menu:hover {
+    box-shadow: 0 0 0 8px #fff, 0 0 0 8px #fff;
+  }
+
+  .hamburguer {
+    position: relative;
+    display: block;
+    background: #000;
+    width: 35px;
+    height: 3px;
+    top: 27px;
+    left: 12px;
+    transition: 1s ease-in-out;
+  }
+
+  .hamburguer:before,
+  .hamburguer:after {
+    background: #000;
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: 1s ease-in-out;
+  }
+
+  .hamburguer:before {
+    top: -10px;  
+  }
+
+  .hamburguer:after {
+    bottom: -10px;  
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked ~ label .menu{
+    box-shadow: 0 0 0 130vw #fff, 0 0 0 100vh #fff;
+  }
+
+  input:checked ~ label .hamburguer{
+    transform: rotate(45deg);
+  }
+
+  input:checked ~ label .hamburguer:before{
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+  input:checked ~ label .hamburguer:after{
+    transform: rotate(90deg);
+    bottom: 0;
+  }
+
+  input:checked ~ ul{
+    opacity: 1;
+  }
+
+  ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    opacity: 0;
+    transition: 0.5s 0.5s ease-in;
+  }
+
+  a {
+    display: block;
+    margin-bottom: 30px; 
+    font-size: 45px;
+    color: #00cec9;
+    text-decoration: none;
+  }
+
+</style>
+
+<body>
+  <input type="checkbox" id="transition">
+  <label for="transition">
+    <div class="menu">
+      <span class="hamburguer"></span>
+    </div>
+  </label>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">More</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</body>
+</html>
