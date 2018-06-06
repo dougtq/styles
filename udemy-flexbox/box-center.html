@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Box Center</title>
+</head>
+<style>
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: tomato;
+  }
+
+  .container {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .container > div {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+    border: 1px solid #fff;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    transition: all 250ms ease;
+  }
+
+  .container > *:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .container .box {
+    width: 300px;
+  }
+
+  .box .box--lv2 {
+    background: #fff;
+    height: 50px;
+    width: 50px;
+    display: block;
+  }
+
+  .flex-total-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+</style>
+<body>
+  <div class="container flex-total-centered">
+    <div class="box flex-total-centered">
+      <div class="box--lv2"></div>
+    </div>
+  </div>
+</body>
+</html>
