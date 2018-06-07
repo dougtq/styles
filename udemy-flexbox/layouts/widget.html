@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Widget</title>
+</head>
+<style>
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-size: 20px;
+    background: tomato;
+    text-align: center;
+  }
+
+  .container > * {
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0;
+    margin: 5px;
+    transition: all 250ms ease;
+  }
+
+  .container > *:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .weather {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .weather > div {
+    margin: 10px 0;
+  }
+
+  .weather__period {
+    flex: 1;
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .weather__icon img {
+    height: 50px;
+    min-width: 50px;
+    width: 50px;
+  }
+
+  .weather__min {
+    font-weight: 700;
+  }
+
+  @media (min-width: 600px) {
+    .weather {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .weather > div {
+      margin: 0 20px;
+    }
+
+    .weather__period {
+      font-size: 1.5rem;
+      width: 50px;
+      text-align: left;
+    }
+
+    .weather__minmax {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .weather__dash {
+      display: none;
+    }
+
+  }
+
+  @media (min-width: 900px) {
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .weather {
+      flex-basis: 100px;
+      flex-direction: column;
+    }
+
+    .weather > div {
+      margin: 10px 0;
+    }
+
+    .weather__period {
+      flex-basis: 50px;
+    }
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="weather">
+      <div class="weather__period">Manhã</div>
+      <div class="weather__icon">
+        <img src="https://image.flaticon.com/icons/svg/732/732290.svg" alt="Imagem que representa a previsão do tempo">
+      </div>
+      <div class="weather__minmax">
+        <span class="weather__min">16&ordm;</span>
+        <span class="weather__dash">--</span>
+        <span class="weather__max">25&ordm;</span>
+      </div>
+      <div class="weather__hr">HR 75%</div>
+    </div>
+    <div class="weather">
+      <div class="weather__period">Tarde</div>
+      <div class="weather__icon">
+        <img src="https://image.flaticon.com/icons/svg/732/732265.svg" alt="Imagem que representa a previsão do tempo">
+      </div>
+      <div class="weather__minmax">
+        <span class="weather__min">19&ordm;</span>
+        <span class="weather__dash">--</span>
+        <span class="weather__max">29&ordm;</span>
+      </div>
+      <div class="weather__hr">HR 85%</div>
+    </div>
+    <div class="weather">
+      <div class="weather__period">Noite</div>
+      <div class="weather__icon">
+        <img src="https://image.flaticon.com/icons/svg/732/732279.svg" alt="Imagem que representa a previsão do tempo">
+      </div>
+      <div class="weather__minmax">
+        <span class="weather__min">14&ordm;</span>
+        <span class="weather__dash">--</span>
+        <span class="weather__max">22&ordm;</span>
+      </div>
+      <div class="weather__hr">HR 65%</div>
+    </div>
+  </div>
+</body>
+</html>
