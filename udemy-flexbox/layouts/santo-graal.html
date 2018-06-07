@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Santo Graal</title>
+</head>
+<style>
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-size: 40px;
+    background: tomato;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .container > * {
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+    border: 1px solid #fff;
+    color: #fff;
+    margin: 5px;
+    padding: 20px;
+    transition: all 250ms ease;
+  }
+
+  .container > *:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  div.content {
+    flex: 1; 
+  }
+
+  .menu,
+  .ads {
+    flex-basis: 100px;
+  }
+
+  main.main {
+    flex: 1;
+  }
+
+  @media (min-width: 900px) {
+    .content {
+      flex-direction: row;
+    }
+
+    main.main {
+      flex-basis: 500px;
+    }
+  }
+</style>
+<body class="container">
+  <header class="header">Header</header>
+  <div class="content container">
+    <aside class="menu">Menu</aside>
+    <main class="main">Main Content</main>
+    <aside class="ads">ADS</aside>
+  </div>
+  <footer class="footer">Footer</footer>
+</body>
+</html>
