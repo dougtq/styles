@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex Cards</title>
+</head>
+<style>
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: tomato;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    outline: 1px solid #fff;
+  }
+
+  .container > * {
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 20px;
+    transition: all 250ms ease;
+  }
+
+  .container > *:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  .card {
+    width: 250px;
+    padding: 0;
+    text-align: left;
+  }
+
+  .card img {
+    max-width: 100%;
+  }
+
+  .card__content {
+    padding: 0 20px;
+  }
+
+</style>
+<body>
+  <div class="container">
+    <article class="card">
+      <img src="http://via.placeholder.com/350x250">
+      <div class="card__content">
+        <h1>Card Title</h1>
+        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="http://via.placeholder.com/350x150">
+      <div class="card__content">
+        <h1>Card Title</h1>
+        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="http://via.placeholder.com/350x150">
+      <div class="card__content">
+        <h1>Card Title</h1>
+        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+      </div>
+    </article>      
+  </div>
+</body>
+</html>
