@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Accordion</title>
+</head>
+<style>
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-size: 20px;
+    background: tomato;
+    text-align: center;
+  }
+
+  .container > * {
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+    border: 1px solid #fff;
+    color: #fff;
+    margin: 5px;
+    transition: all 250ms ease;
+  }
+
+  .container > *:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+
+  .accordion {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1)
+  }  
+
+  .accordion:hover {
+    flex-basis: 65vw;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+</style>
+<body>
+  <div class="container">
+    <div class="accordion" style="background-image:url(https://cdn.allwallpaper.in/wallpapers/1024x768/3759/venice-architecture-cityscapes-landscapes-1024x768-wallpaper.jpg)"></div>
+    <div class="accordion" style="background-image:url(https://i.pinimg.com/originals/3e/2a/f6/3e2af664e061013a3d05aa99fa20c1d4.jpg)"></div>
+    <div class="accordion" style="background-image:url(https://www.newhdwallpapers.in/wp-content/uploads/2015/07/Beach-Sunrise-Nature-Desktop-Wallpaper.jpg)"></div>
+    <div class="accordion" style="background-image:url(https://thewallpaper.co/wp-content/uploads/2017/10/clouds-paths-treesmountains-cool-images-viewhd-nature-wallpapers-cool-iphone-landscapes.jpg)"></div>
+  </div>
+</body>
+</html>
