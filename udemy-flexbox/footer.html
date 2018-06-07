@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fixed Flex Footer</title>
+</head>
+<style>
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: tomato;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .container > * {
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+    border: 1px solid #fff;
+    color: #fff;
+    margin: 5px;
+    padding: 20px;
+    transition: all 250ms ease;
+  }
+
+  .container > *:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .container main {
+    margin: 20px 40px;
+    flex: 1;
+  }
+  
+  .fixed-footer {
+
+  }
+</style>
+<body class="container">
+  <div class="header">Header</div>
+  <main class="content">Content</main>
+  <div class="fixed-footer">Footer</div>
+</body>
+</html>
