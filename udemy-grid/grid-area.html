@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Grid Area</title>
+</head>
+<style>
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    .wrapper {
+      display: grid;
+      height: 100vh;
+      grid-column: repeat(4, 1fr);
+      grid-auto-rows: 200px;
+      grid-gap: 20px;
+      grid-template-areas: 
+      "menu menu menu menu"
+      "aside__left main main aside__right"
+      "footer      footer footer footer"
+    }
+  
+  }
+
+  .wrapper >  * {
+    border: 1px solid teal;
+  }
+
+  .menu {
+    grid-area: menu;
+  }
+
+  .main {
+    grid-area: main;
+  }
+
+  .aside__left {
+    grid-area: aside__left;
+  }
+
+  .aside__right {
+    grid-area: aside__right;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+</style>
+<body>
+  <div class="wrapper">
+    <header class="menu">Menu</header>
+    <aside class="aside__left">Aside</aside>
+    <main class="main">Main</main>
+    <aside class="aside__right">Aside</aside>
+    <footer class="footer">Footer</footer>
+  </div>
+</body>
+</html>

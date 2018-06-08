@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Grid Area</title>
+</head>
+<style>
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+
+  .wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: minmax(200px, 300px) 1fr minmax(200px, 300px);
+    grid-template-rows: 100px auto;
+    grid-gap: 45px 10px;
+  }
+
+  .wrapper >  * {
+    border: 1px solid teal;
+  }
+
+  .menu {
+    grid-row: 1;
+    grid-column: 1 / -1;
+  }
+
+  .main {
+    grid-column: 2 / 3;
+  }
+
+  .aside__left {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+</style>
+<body>
+  <div class="wrapper">
+    <main class="main">Main</main>
+    <aside class="aside__left">Aside</aside>
+    <aside class="aside__right">Aside</aside>
+    <header class="menu">Menu</header>
+  </div>
+</body>
+</html>

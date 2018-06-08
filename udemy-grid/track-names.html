@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Track Names</title>
+</head>
+<style>
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+
+  .wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: [inicio__linha] 1fr [content__start] repeat(4, 1fr) [fim__linha];
+    grid-template-rows: [topo__site] 100px  [content__start] minmax(200px, auto) [content__end] 100px [rodape__site];
+    grid-auto-rows: 200px;
+    grid-gap: .5rem;
+  }
+
+  .wrapper > * {
+    border: 1px solid teal;
+  }
+
+  .header {
+    grid-column: inicio__linha / fim__linha;
+    grid-row: 100px;
+  }
+
+  .main {
+    grid-column: content__start / fim__linha;
+  }
+
+  aside {
+    grid-row-start: content__start;
+    grid-column: inicio__linha / content__start;
+  }
+
+  .footer {
+    grid-column: inicio__linha / fim__linha;
+  }
+
+</style>
+<body>
+  <div class="wrapper">
+    <header class="header">Header</header>
+    <main class="main">Main</main>
+    <aside>Aside</aside>
+    <footer class="footer">Footer</footer>
+  </div>
+</body>
+</html>

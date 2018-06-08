@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Grid</title>
+</head>
+<style>
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(200px, auto));
+    grid-gap: 7px;
+    grid-auto-rows: 200px;
+  }
+
+  .wrapper > div {
+    background: tomato;
+    padding: 1rem;
+  }
+
+  .wrapper > div:nth-child(even) {
+    background: thistle;
+  }
+
+  .wrapper > div:nth-child(1) {
+    grid-column: 1 / -1;
+  }
+
+  .wrapper > div:nth-child(2) {
+    align-self: center;
+    justify-self: center;
+    grid-column: 1 / -1;
+  }
+
+  .wrapper > div:nth-child(4) {
+    grid-column: 2 / 4;
+    grid-row: 3 / 6;
+  }
+
+
+  @media (min-width: 768px) {
+    .wrapper {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+</style>
+<body>
+  <div class="wrapper">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+  </div>
+</body>
+</html>
