@@ -28,22 +28,39 @@
     border: 1px solid teal;
   }
 
-  .header {
-    grid-column: inicio__linha / fim__linha;
-    grid-row: 100px;
+  aside,
+  .main {
+    margin: 20px 0;
+  }
+
+  aside {
+    margin-left: 20px;
   }
 
   .main {
+    margin-right: 20px;
+  }
+
+  .header {
+    grid-column: inicio__linha / fim__linha;
+    background: rgb(130, 167, 152);
+  }
+
+  .main {
+    
     grid-column: content__start / fim__linha;
+    background: rgb(123, 141, 243);
   }
 
   aside {
     grid-row-start: content__start;
     grid-column: inicio__linha / content__start;
+    background: rgb(125, 185, 181);
   }
 
   .footer {
     grid-column: inicio__linha / fim__linha;
+    background: rgb(168, 156, 85);
   }
 
 </style>
