@@ -1,2 +1,3 @@
 # styles
-Pushing my css skills to a new level
+
+Pushing my css skills to a high level
